@@ -13,7 +13,7 @@ Consider a lock-based FIFO queue, it works correct concurrently. But, `enqueue` 
     thread 4:                                     lock deque unlock
   ```
 - FIFO queue without lock</br>
-  In this simple implementation, it only works on two threads, one for `enqueue`, another for `dequeue`.</br>
+  In this simple implementation, it only works on two threads, one for `enqueue` ONLY, another for `dequeue` ONLY.</br>
   It *takes effect concurrently*,  one possibility could be like that:
   ```
    thread 1: enque  enque
