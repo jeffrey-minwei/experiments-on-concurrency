@@ -16,8 +16,8 @@ Consider a lock-based FIFO queue, it works correct concurrently. But, `enqueue` 
   In this simple implementation, it only works on two threads, one for `enqueue` ONLY, another for `dequeue` ONLY.</br>
   It *takes effect concurrently*,  one possibility could be like that:
   ```
-   thread 1: enque  enque
-   thread 2:   deque  deque
+  thread 1:   deque
+  thread 2:     enque  enque
   ```
 
 `Linearizability` is a correctness condition for concurrent objects <sup>[[`2`](https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf)]</sup>, this section will experiments it through study the paper [`Linearizability: A Correctness Condition for Concurrent Objects`](https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf).
