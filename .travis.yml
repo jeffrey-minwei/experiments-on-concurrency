@@ -1,0 +1,11 @@
+language: c
+compiler: gcc
+
+script:
+    - cd concurrent-object
+    - make lock_queue
+    - make queue_without_lock
+
+branches:
+  only:
+    - develop
