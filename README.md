@@ -14,6 +14,11 @@ Consider a set *X* which elements are modifications of an atomic object, and a b
 
 This section will experiments on `modification order`, `happens before`, `sequenced before`.
 
+## Concurrent Queue
+Experiments on implements a lock-free concurrent queue based on [`Michael & Scott algorithm`](https://www.researchgate.net/publication/2804621_Simple_Fast_and_Practical_Non-Blocking_and_Blocking_Concurrent_Queue_Algorithms).
+
+This section will experiments on [`Harris's solution`](https://en.wikipedia.org/wiki/Non-blocking_linked_list) for non-blocking concurrent singly-linked list using atomic_compare_exchange_strong.
+
 ## Concurrent Object
 Consider a lock-based FIFO queue, it works correct concurrently. But, `enqueue` and `dequeue` *can't takes effect concurrently*, they are still sequential. This section will implements a concurrent FIFO queue without lock, compared with a lock-based implementation <sup>[[`1`](http://cs.brown.edu/courses/cs176/lectures/chapter_03.pdf)]</sup>.
 - Lock-based FIFO queue</br>
