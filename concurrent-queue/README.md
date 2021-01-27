@@ -12,5 +12,8 @@ Experiments on implements a lock-free concurrent queue based on [`Michael & Scot
 - Step 3. bool result = cas(&p->next, next, n)
 - Step 4. if result == false, **goto Step 1**
 
+### Insertion
+Based on [`Michael & Scott algorithm`](https://www.researchgate.net/publication/2804621_Simple_Fast_and_Practical_Non-Blocking_and_Blocking_Concurrent_Queue_Algorithms), after insert node to the list, swing tail to the inserted node, using `atomic_compare_exchange_strong(&list->tail, &tail, &new)`
+
 ## References
 - [ ] [Wikipedia, Non-blocking linked list](https://en.wikipedia.org/wiki/Non-blocking_linked_list)

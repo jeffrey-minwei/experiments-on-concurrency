@@ -13,6 +13,9 @@ harris_solution: harris_solution.c node.h
 test_harris: test_harris.c harris_solution.o list.o
 	$(CC) $(CFLAGS) $(LINKER) $^ -o $@
 
+test_list: test_list.c list.o
+	$(CC) $(CFLAGS) $(LINKER) $^ -o $@
+
 clean:
 	rm *.o
 	if [ -f $(OUT) ] ; then rm $(OUT) ; fi;
