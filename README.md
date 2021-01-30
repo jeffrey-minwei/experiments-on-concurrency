@@ -1,8 +1,10 @@
+[![Build Status](https://travis-ci.com/jeffrey-minwei/experiments-on-concurrency.svg?branch=master)](https://travis-ci.com/jeffrey-minwei/experiments-on-concurrency)
 # Experiments on Concurrency
 
 This repository is **focus on experimental** regarding several concurrency topics including `sequenced before`, `happens before`, `synchronization`, `concurrent object`, `linearizability`, `universal construction`, `wait-free`, `shared memory`, `message passing`, `concurrent container`, ... etc. All are implemented by [`C11 standard`](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf).
 
 ## [C11 standard](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf)
+[[`中文筆記`](https://hackmd.io/@butastur/concurrency-happens-before)]</br>
 [`C11 standard`](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf) defines `multi-threaded executions and data races` at `§5.1.2.4` which specifies the detail regarding `modification order`, `happens before`, `sequenced before`<sub>(§5.1.2.3)</sub> and other concurrency related topics. 
 
 Consider a binary relation *R* over a set *X* which *R* is total order if *R* satify:
@@ -15,6 +17,7 @@ Consider a set *X* which elements are modifications of an atomic object, and a b
 This section will experiments on `modification order`, `happens before`, `sequenced before`.
 
 ## Concurrent Queue
+[[`中文筆記`](https://hackmd.io/@butastur/concurrent-queue)]</br>
 Experiments on implements a lock-free concurrent queue based on [`Michael & Scott algorithm`](https://www.researchgate.net/publication/2804621_Simple_Fast_and_Practical_Non-Blocking_and_Blocking_Concurrent_Queue_Algorithms).
 
 This section will experiments on [`Harris's solution`](https://en.wikipedia.org/wiki/Non-blocking_linked_list) for non-blocking concurrent singly-linked list using atomic_compare_exchange_strong.

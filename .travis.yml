@@ -5,6 +5,9 @@ script:
     - cd concurrent-object
     - make lock_queue
     - make queue_without_lock
+    - cd ../concurrent-queue/
+    - make test_harris
+    - make test_list
 
 branches:
   only:

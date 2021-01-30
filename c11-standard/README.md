@@ -1,6 +1,6 @@
 # Experiments on [C11 standard](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf)
 
-[`中文版`](https://hackmd.io/@butastur/concurrency-happens-before)
+[`中文筆記`](https://hackmd.io/@butastur/concurrency-happens-before)
 
 ## Introduction
 [`C11 standard`](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf) defines `multi-threaded executions and data races` at `§5.1.2.4` which specifies the detail regarding `modification order`, `happens before`, `sequenced before`<sub>(§5.1.2.3)</sub>. 
