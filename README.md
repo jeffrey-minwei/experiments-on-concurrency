@@ -22,6 +22,9 @@ Experiments on implements a lock-free concurrent queue based on [`Michael & Scot
 
 This section will experiments on [`Harris's solution`](https://en.wikipedia.org/wiki/Non-blocking_linked_list) for non-blocking concurrent singly-linked list using atomic_compare_exchange_strong.
 
+## [Lock-free Concurrent Thread Pool](https://github.com/jeffrey-minwei/experiments-on-concurrency/tree/master/concurrent-thread-pool)
+This section is experiments on how to implements a lock-free concurrent thread pool
+
 ## Concurrent Object
 Consider a lock-based FIFO queue, it works correct concurrently. But, `enqueue` and `dequeue` *can't takes effect concurrently*, they are still sequential. This section will implements a concurrent FIFO queue without lock, compared with a lock-based implementation <sup>[[`1`](http://cs.brown.edu/courses/cs176/lectures/chapter_03.pdf)]</sup>.
 - Lock-based FIFO queue</br>
