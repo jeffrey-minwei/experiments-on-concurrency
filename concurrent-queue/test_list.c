@@ -14,13 +14,13 @@ int main(int argc, char **argv) {
 
     pthread_t thx0, thx1;
 
-    list_t list = create_list();
+    list_t *list = create_list();
 
-    pthread_create(&thx0, NULL, thx_insert, &list);
-    pthread_create(&thx1, NULL, thx_insert, &list);
+    pthread_create(&thx0, NULL, thx_insert, list);
+    pthread_create(&thx1, NULL, thx_insert, list);
     pthread_join(thx0, NULL);
     pthread_join(thx1, NULL);
 
-    assert(2 == length(&list));
+    assert(2 == length(list));
     return 0;
 }

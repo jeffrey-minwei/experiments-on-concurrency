@@ -1,5 +1,6 @@
 # Experiments on Lock-free Concurrent Queue
 
+[[`中文筆記`](https://hackmd.io/@butastur/concurrent-queue)]</br>
 Experiments on implements a lock-free concurrent queue based on [`Michael & Scott algorithm`](https://www.researchgate.net/publication/2804621_Simple_Fast_and_Practical_Non-Blocking_and_Blocking_Concurrent_Queue_Algorithms).
 
 ## Non-blocking singly-linked list
@@ -16,4 +17,5 @@ Experiments on implements a lock-free concurrent queue based on [`Michael & Scot
 Based on [`Michael & Scott algorithm`](https://www.researchgate.net/publication/2804621_Simple_Fast_and_Practical_Non-Blocking_and_Blocking_Concurrent_Queue_Algorithms), after insert node to the list, swing tail to the inserted node, using `atomic_compare_exchange_strong(&list->tail, &tail, &new)`
 
 ## References
+- [ ] Timothy L. Harris. 2001. A Pragmatic Implementation of Non-blocking Linked-Lists. In <i>Proceedings of the 15th International Conference on Distributed Computing</i> (<i>DISC '01</i>). Springer-Verlag, Berlin, Heidelberg, 300–314.
 - [ ] [Wikipedia, Non-blocking linked list](https://en.wikipedia.org/wiki/Non-blocking_linked_list)

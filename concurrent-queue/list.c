@@ -2,16 +2,17 @@
 #include <stdatomic.h>
 #include <limits.h>
 #include <assert.h>
+#include <stdlib.h>
 #include "node.h"
 #include "list.h"
 
-list_t create_list() {
-    node_t dummy;
-    dummy.next = NULL;
+list_t *create_list() {
+    node_t *dummy = malloc(sizeof(node_t));
+    dummy->next = NULL;
 
-    list_t list;
-    list.head = &dummy;
-    list.tail = &dummy;
+    list_t *list = malloc(sizeof(list_t));
+    list->head = dummy;
+    list->tail = dummy;
     return list;
 }
 
