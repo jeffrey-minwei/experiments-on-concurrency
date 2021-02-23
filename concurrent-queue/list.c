@@ -21,15 +21,15 @@ list_t *create_list() {
  *    https://en.wikipedia.org/wiki/Non-blocking_linked_list
  *    https://www.researchgate.net/publication/2804621_Simple_Fast_and_Practical_Non-Blocking_and_Blocking_Concurrent_Queue_Algorithms
  */
-void insert(list_t *list, node_t new) {
+void insert(list_t *list, node_t *new) {
     node_t *tail;
     volatile node_t *next;
     do {
         tail = list->tail;
         next = tail->next;
-        new.next = next;
-    } while (! atomic_compare_exchange_strong(&tail->next, &next, &new));
-    atomic_compare_exchange_strong(&list->tail, &tail, &new);
+        new->next = next;
+    } while (! atomic_compare_exchange_strong(&tail->next, &next, new));
+    atomic_compare_exchange_strong(&list->tail, &tail, new);
 }
 
 /**

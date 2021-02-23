@@ -13,7 +13,7 @@ typedef struct list_t {
 
 list_t *create_list();
 
-void insert(list_t *, node_t);
+void insert(list_t *, node_t *);
 
 unsigned int length(list_t *);
 
